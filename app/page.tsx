@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, MessageCircle, ArrowRight, CheckCircle, Star, Quote } from "lucide-react";
+import JsonLd, { localBusinessSchema, organizationSchema } from "./components/JsonLd";
 
 export default function Home() {
   const services = [
@@ -82,7 +83,10 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <>
+      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={organizationSchema} />
+      <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -310,6 +314,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

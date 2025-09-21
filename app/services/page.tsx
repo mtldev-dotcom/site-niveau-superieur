@@ -1,6 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone, MessageCircle, CheckCircle, Users, Clock, Award } from "lucide-react";
+import { Phone, MessageCircle, CheckCircle, Users, Clock, Award } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nos Services de Construction",
+  description: "Découvrez nos services de construction : résidentiel, commercial, rénovations, charpente, finition intérieure, électricité et domotique. Expertise RBQ dans le Grand Montréal.",
+  keywords: [
+    "services construction", "construction résidentielle Montréal", "rénovation Laval",
+    "construction commerciale", "charpente Québec", "finition intérieure",
+    "électricité domotique", "entrepreneur RBQ"
+  ],
+  openGraph: {
+    title: "Services de Construction | Niveau Supérieur Construction",
+    description: "Services complets de construction et rénovation dans le Grand Montréal. Licence RBQ, 46 ans d'expérience combinée.",
+    url: "https://niveausuperieur.ca/services",
+    images: ["/images/images/hero-construction-2.jpg"],
+  },
+};
 
 export default function ServicesPage() {
   const services = [
@@ -195,7 +212,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div key={service.id} className="bg-white rounded-lg overflow-hidden card-shadow">
                 <div className="relative h-64">
                   <Image
