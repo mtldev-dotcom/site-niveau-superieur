@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 bg-white shadow-lg z-50">
+    <header className="sticky top-0 bg-background border-b border-border shadow-lg z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -30,10 +31,10 @@ export default function Header() {
               className="w-12 h-12"
             />
             <div>
-              <h1 className="font-extrabold text-xl text-black">
+              <h1 className="font-extrabold text-xl text-foreground">
                 Niveau Supérieur
               </h1>
-              <p className="text-sm text-red-600 uppercase tracking-wide">
+              <p className="text-sm text-primary uppercase tracking-wide">
                 Construction
               </p>
             </div>
@@ -45,7 +46,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-medium text-gray-600 hover:text-red-600 transition-colors duration-200"
+                className="font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -56,43 +57,47 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:514-555-7890"
-              className="flex items-center space-x-2 text-gray-600 hover:text-red-600 transition-colors"
+              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="font-medium">514-555-7890</span>
             </a>
             <a
               href="https://wa.me/15145557890"
-              className="flex items-center space-x-2 text-gray-600 hover:text-red-600 transition-colors"
+              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               <MessageCircle className="w-4 h-4" />
               <span className="font-medium">WhatsApp</span>
             </a>
+            <ThemeToggle />
             <Link href="/soumission" className="btn-primary">
               Demander une soumission
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-600 hover:text-red-600 transition-colors"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu Toggle & Theme Toggle */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200">
+          <div className="lg:hidden border-t border-border">
             <nav className="py-4 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block font-medium text-gray-600 hover:text-red-600 transition-colors"
+                  className="block font-medium text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -101,14 +106,14 @@ export default function Header() {
               <div className="pt-4 space-y-3">
                 <a
                   href="tel:514-555-7890"
-                  className="flex items-center space-x-2 text-gray-600 hover:text-red-600 transition-colors"
+                  className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span className="font-medium">514-555-7890</span>
                 </a>
                 <a
                   href="https://wa.me/15145557890"
-                  className="flex items-center space-x-2 text-gray-600 hover:text-red-600 transition-colors"
+                  className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

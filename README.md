@@ -22,7 +22,6 @@ This website showcases the services, projects, and expertise of Niveau Supérieu
 - **SEO**: Structured data (JSON-LD), metadata optimization
 
 ## 📁 Project Structure
-
 ```
 site/
 ├── app/

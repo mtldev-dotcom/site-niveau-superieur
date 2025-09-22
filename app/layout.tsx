@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins, Open_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import ClientWrapper from "./components/ClientWrapper";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -91,9 +90,9 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${poppins.variable} ${openSans.variable} font-open-sans antialiased`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ClientWrapper>
+          {children}
+        </ClientWrapper>
       </body>
     </html>
   );
