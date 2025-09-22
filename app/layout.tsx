@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat, Poppins, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { cookies } from 'next/headers';
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Niveau Supérieur Construction" }],
   creator: "Niveau Supérieur Construction",
   publisher: "Niveau Supérieur Construction",
+  metadataBase: new URL("https://niveausuperieur.ca"),
   robots: {
     index: true,
     follow: true,
@@ -79,6 +80,22 @@ export const metadata: Metadata = {
       "en-CA": "https://niveausuperieur.ca/en",
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/favicon.ico" }
+    ],
+    apple: "/favicon/apple-touch-icon.png",
+    other: [
+      { rel: "android-chrome", url: "/favicon/android-chrome-192x192.png", sizes: "192x192" },
+      { rel: "android-chrome", url: "/favicon/android-chrome-512x512.png", sizes: "512x512" }
+    ]
+  }
+};
+
+export const viewport: Viewport = {
+  themeColor: "#dc2626",
 };
 
 export default async function RootLayout({

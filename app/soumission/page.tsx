@@ -221,7 +221,7 @@ export default function QuotePage() {
   }
 
   return (
-    <div className="min-h-screen bg-muted">
+    <div className="min-h-screen bg-muted overflow-x-hidden">
       {/* Header */}
       <section className="bg-card border-theme">
         <div className="container-custom py-8">
@@ -231,10 +231,24 @@ export default function QuotePage() {
               Obtenez une soumission détaillée et personnalisée pour votre projet
             </p>
 
-            {/* Progress Bar */}
-            <div className="flex items-center justify-between mb-8">
+            {/* Progress */}
+            {/* Mobile compact progress */}
+            <div className="sm:hidden mb-8">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-medium text-muted">Étape {currentStep} sur {totalSteps}</span>
+                <span className="text-sm text-muted">{steps[currentStep - 1]?.title}</span>
+              </div>
+              <div className="w-full h-2 rounded-full bg-muted border border-theme overflow-hidden">
+                <div
+                  className="h-full bg-red-600 transition-all"
+                  style={{ width: `${Math.round(((currentStep - 1) / (totalSteps - 1)) * 100)}%` }}
+                />
+              </div>
+            </div>
+            {/* Desktop/tablet stepper */}
+            <div className="hidden sm:flex items-center justify-between mb-8 overflow-x-auto">
               {steps.map((step, index) => (
-                <div key={step.number} className="flex items-center">
+                <div key={step.number} className="flex items-center shrink-0">
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors ${
                     currentStep >= step.number
                       ? 'bg-red-600 border-red-600 text-card-foreground'
@@ -246,7 +260,7 @@ export default function QuotePage() {
                       step.icon
                     )}
                   </div>
-                  <div className="ml-3 hidden sm:block">
+                  <div className="ml-3 hidden md:block">
                     <div className={`text-sm font-medium ${
                       currentStep >= step.number ? 'text-red-600' : 'text-muted'
                     }`}>
@@ -662,12 +676,12 @@ export default function QuotePage() {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between items-center mt-8 pt-6 border-t">
+                <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 mt-8 pt-6 border-t">
                     <button
                     type="button"
                     onClick={prevStep}
                     disabled={currentStep === 1}
-                    className="flex items-center space-x-2 px-6 py-3 border border-theme rounded-lg text-muted hover:bg-card disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full sm:w-auto flex items-center justify-center space-x-2 px-6 py-3 border border-theme rounded-lg text-muted hover:bg-card disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <ChevronLeft className="w-4 h-4" />
                     <span>Précédent</span>
@@ -684,7 +698,7 @@ export default function QuotePage() {
                       type="button"
                       onClick={nextStep}
                       disabled={!isStepValid()}
-                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-6 py-3 rounded-lg transition-colors"
+                      className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-6 py-3 rounded-lg transition-colors"
                     >
                       <span>Suivant</span>
                       <ChevronRight className="w-4 h-4" />
@@ -693,7 +707,7 @@ export default function QuotePage() {
                     <button
                       type="submit"
                       disabled={!isStepValid() || isSubmitting}
-                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-8 py-3 rounded-lg transition-colors"
+                      className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-8 py-3 rounded-lg transition-colors"
                     >
                       {isSubmitting ? (
                         <>
