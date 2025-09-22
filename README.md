@@ -68,6 +68,17 @@ app/
 4. Optimisations SEO avancées (balises hreflang, métadonnées dynamiques par page projet/service).
 5. Tests d'accessibilité (focus, aria, contrastes) et automatisation Lighthouse.
 
+## 📚 Documentation
+- Documentation centrale: ./docs/README.md
+- Aperçu entreprise: ./docs/overview.md
+- Guide de marque: ./docs/brand/guide-marque.md
+- PRD: ./docs/product/prd.md
+- Wireframes: ./docs/design/wireframes.md
+- Guide de contribution: ./docs/dev/contribution.md
+- Backlog: ./docs/project/backlog.md
+- Tâches & TODO: ./docs/project/taches-todo.md
+- Assets: ./docs/assets/
+
 ## 📄 Licence
 
 Projet propriétaire développé pour Niveau Supérieur Construction.
