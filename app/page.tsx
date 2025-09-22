@@ -297,10 +297,10 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding bg-brand-black text-white">
         <div className="container-custom text-center">
-          <h2 className="heading-lg text-white mb-4">
+          <h2 className="heading-lg text-theme mb-4">
             Prêt à lancer votre projet?
           </h2>
-          <p className="font-open-sans text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="font-open-sans text-xl text-muted mb-8 max-w-3xl mx-auto">
             Demandez une soumission gratuite et laissez notre équipe d&apos;experts
             transformer votre vision en réalité.
           </p>

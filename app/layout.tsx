@@ -88,29 +88,30 @@ export default async function RootLayout({
 }>) {
   const setInitialTheme = `(function() {
     try {
-      // Only apply when no explicit theme class is present (server may have rendered one)
       var root = document.documentElement;
-      if (root.classList.contains('dark') || root.classList.contains('light')) return;
-      var theme = localStorage.getItem('theme');
-      if (theme === 'dark') {
-        root.classList.add('dark');
-      } else if (theme === 'light') {
-        root.classList.add('light');
-      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        root.classList.add('dark');
-      } else {
-        root.classList.add('light');
+      var stored = localStorage.getItem('theme');
+      var theme = stored === 'dark' || stored === 'light' ? stored : '';
+      if (!theme && window.matchMedia) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
+      if (!theme) {
+        theme = 'light';
+      }
+      var opposite = theme === 'dark' ? 'light' : 'dark';
+      root.classList.remove(opposite);
+      root.classList.add(theme);
+      var maxAge = 60 * 60 * 24 * 365;
+      document.cookie = 'theme=' + theme + '; Path=/; Max-Age=' + maxAge + '; SameSite=Lax';
     } catch (e) {}
   })();`;
 
   // Read server-side cookie to set html class before hydration (Next.js server)
   const cookieStore = await cookies();
   const themeCookie = cookieStore.get?.('theme')?.value ?? cookieStore.get('theme')?.value;
-  const htmlClass = themeCookie === 'dark' ? 'dark' : themeCookie === 'light' ? 'light' : '';
+  const htmlClass = themeCookie === 'dark' ? 'dark' : themeCookie === 'light' ? 'light' : undefined;
 
   return (
-    <html lang="en" className={htmlClass}>
+    <html lang="en" className={htmlClass} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
       </head>
