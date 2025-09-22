@@ -13,8 +13,8 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Niveau Supérieur Construction"
-                width={128}
-                height={128}
+                width={96}
+                height={96}
                 className="self-start w-28 h-28 md:w-40 md:h-40"
               />
               <div className="text-left">
