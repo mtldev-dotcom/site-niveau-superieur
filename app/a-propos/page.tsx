@@ -136,7 +136,7 @@ export default function AboutPage() {
               <h2 className="heading-lg text-theme mb-6">Notre Histoire</h2>
               <div className="space-y-4 text-muted">
                 <p>
-                  <strong className="text-black">Niveau Supérieur Construction</strong> est née de la passion et de l&apos;expertise
+                  <strong className="text-theme">Niveau Supérieur Construction</strong> est née de la passion et de l&apos;expertise
                   de jeunes entrepreneurs déterminés à révolutionner l&apos;industrie de la construction au Québec.
                 </p>
                 <p>
@@ -145,13 +145,13 @@ export default function AboutPage() {
                   les plus complexes.
                 </p>
                 <p>
-                  Notre <strong className="text-black">licence RBQ officielle (5859-1223-01)</strong> témoigne de notre
+                  Notre <strong className="text-theme">licence RBQ officielle (5859-1223-01)</strong> témoigne de notre
                   engagement envers la qualité, la sécurité et la conformité réglementaire. Chaque projet que nous
                   entreprenons reflète notre dévouement à l&apos;excellence et notre volonté de dépasser les attentes
                   de nos clients.
                 </p>
                 <p>
-                  Basés dans le <strong className="text-black">Grand Montréal</strong>, nous servons fièrement
+                  Basés dans le <strong className="text-theme">Grand Montréal</strong>, nous servons fièrement
                   les communautés de Laval, Longueuil, Brossard, Terrebonne et les environs avec un service
                   personnalisé et une approche humaine.
                 </p>
@@ -193,7 +193,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-card p-6 rounded-lg card-shadow">
+              <div key={index} className="text-center card p-6 rounded-lg card-shadow">
                 <div className="flex justify-center mb-4 text-red-600">
                   {stat.icon}
                 </div>
@@ -231,7 +231,7 @@ export default function AboutPage() {
       <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Notre Parcours</h2>
+            <h2 className="heading-lg text-theme mb-4">Notre Parcours</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               46 ans d&apos;expérience combinée qui nous ont menés jusqu&apos;ici
             </p>
@@ -245,7 +245,7 @@ export default function AboutPage() {
               {timeline.map((item, index) => (
                 <div key={index} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                   <div className="lg:w-1/2 lg:px-8">
-                      <div className="bg-card p-6 rounded-lg card-shadow">
+                      <div className="card p-6 rounded-lg card-shadow">
                       <div className="text-red-600 font-bold text-xl mb-2">{item.year}</div>
                       <h3 className="font-bold text-theme mb-2">{item.title}</h3>
                       <p className="text-muted">{item.description}</p>
