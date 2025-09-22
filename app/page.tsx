@@ -97,7 +97,7 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--color-accent)]/70 via-[color:var(--color-accent)]/50 to-[color:var(--color-accent)]/30"></div>
         </div>
 
         <div className="relative z-10 container-custom text-center text-theme">
@@ -141,7 +141,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-lg text-theme mb-4">Nos Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               De la construction neuve aux rénovations complexes, nous maîtrisons tous les aspects
               de votre projet avec professionnalisme et expertise.
             </p>
@@ -181,8 +181,8 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-lg text-theme mb-4">Pourquoi nous choisir?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Notre engagement envers l&apos;excellence nous distingue dans l&apos;industrie de la construction.
+            <p className="text-xl text-muted max-w-3xl mx-auto">
+              Notre engagement envers l'excellence nous distingue dans l'industrie de la construction.
             </p>
           </div>
 
@@ -203,7 +203,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-lg text-theme mb-4">Nos Réalisations Récentes</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Découvrez quelques-uns de nos projets les plus remarquables.
             </p>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 text-card-foreground">
                 <h3 className="font-poppins font-semibold text-lg">Maison moderne - Laval</h3>
                 <p className="font-open-sans text-sm">Construction neuve</p>
               </div>
@@ -231,7 +231,7 @@ export default function Home() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 text-card-foreground">
                 <h3 className="font-poppins font-semibold text-lg">Rénovation cuisine - Brossard</h3>
                 <p className="font-open-sans text-sm">Rénovation complète</p>
               </div>
@@ -245,7 +245,7 @@ export default function Home() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 text-card-foreground">
                 <h3 className="font-poppins font-semibold text-lg">Bureau moderne - Montréal</h3>
                 <p className="font-open-sans text-sm">Aménagement commercial</p>
               </div>
@@ -265,7 +265,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-lg text-theme mb-4">Ce que disent nos clients</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               La satisfaction de nos clients est notre plus grande récompense.
             </p>
           </div>

@@ -110,9 +110,9 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
         </div>
 
-        <div className="relative z-10 container-custom text-center text-white">
-          <h1 className="heading-xl text-white mb-6">Contactez-nous</h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+        <div className="relative z-10 container-custom text-center text-theme">
+          <h1 className="heading-xl text-theme mb-6">Contactez-nous</h1>
+          <p className="text-xl text-muted max-w-3xl mx-auto">
             Prêt à commencer votre projet? Notre équipe est là pour vous accompagner
             de la conception à la réalisation
           </p>
@@ -164,8 +164,8 @@ export default function ContactPage() {
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-green-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-black mb-2">Message envoyé!</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-semibold text-theme mb-2">Message envoyé!</h3>
+                    <p className="text-muted">
                       Merci pour votre message. Nous vous contacterons sous 24h.
                     </p>
                   </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-muted mb-2">
                           Nom complet *
                         </label>
                         <input
@@ -183,13 +183,13 @@ export default function ContactPage() {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
                           placeholder="Votre nom"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-muted mb-2">
                           Email *
                         </label>
                         <input
@@ -199,7 +199,7 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
                           placeholder="votre@email.com"
                         />
                       </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-muted mb-2">
                           Téléphone
                         </label>
                         <input
@@ -216,13 +216,13 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
                           placeholder="514-555-7890"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="projectType" className="block text-sm font-medium text-muted mb-2">
                           Type de projet
                         </label>
                         <select
@@ -230,7 +230,7 @@ export default function ContactPage() {
                           name="projectType"
                           value={formData.projectType}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
                         >
                           <option value="">Sélectionnez un type</option>
                           {projectTypes.map((type, index) => (
@@ -241,9 +241,9 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                        Sujet *
-                      </label>
+                        <label htmlFor="subject" className="block text-sm font-medium text-muted mb-2">
+                          Sujet *
+                        </label>
                       <input
                         type="text"
                         id="subject"
@@ -257,9 +257,9 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Message *
-                      </label>
+                        <label htmlFor="message" className="block text-sm font-medium text-muted mb-2">
+                          Message *
+                        </label>
                       <textarea
                         id="message"
                         name="message"
@@ -267,15 +267,15 @@ export default function ContactPage() {
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
-                        placeholder="Décrivez votre projet en détail..."
-                      />
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500 transition-colors"
+                          placeholder="Décrivez votre projet en détail..."
+                        />
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white px-8 py-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                      className="w-full bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-8 py-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -303,7 +303,7 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <a
                     href="tel:514-555-7890"
-                    className="flex items-center space-x-3 bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors"
+                    className="flex items-center space-x-3 bg-card/10 hover:bg-card/20 p-3 rounded-lg transition-colors"
                   >
                     <Phone className="w-5 h-5" />
                     <div>
@@ -315,7 +315,7 @@ export default function ContactPage() {
                     href="https://wa.me/15145557890"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors"
+                    className="flex items-center space-x-3 bg-card/10 hover:bg-card/20 p-3 rounded-lg transition-colors"
                   >
                     <MessageCircle className="w-5 h-5" />
                     <div>
@@ -336,7 +336,7 @@ export default function ContactPage() {
                   {serviceAreas.map((area, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <MapPin className="w-3 h-3 text-red-600 flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{area}</span>
+                      <span className="text-sm text-muted">{area}</span>
                     </div>
                   ))}
                 </div>
@@ -347,15 +347,15 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold text-theme mb-4">Heures d'ouverture</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Lundi - Vendredi</span>
+                    <span className="text-muted">Lundi - Vendredi</span>
                     <span className="font-medium">7h00 - 18h00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Samedi</span>
+                    <span className="text-muted">Samedi</span>
                     <span className="font-medium">8h00 - 16h00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Dimanche</span>
+                    <span className="text-muted">Dimanche</span>
                     <span className="font-medium">Fermé</span>
                   </div>
                   <div className="pt-3 border-t">
@@ -393,12 +393,12 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-black text-white">
+      <section className="section-padding bg-muted text-theme">
         <div className="container-custom text-center">
-          <h2 className="heading-lg text-white mb-4">
+          <h2 className="heading-lg text-theme mb-4">
             Prêt à démarrer votre projet?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-muted mb-8 max-w-3xl mx-auto">
             Obtenez une soumission détaillée et personnalisée pour votre projet de construction ou rénovation.
           </p>
           <Link href="/soumission" className="btn-primary inline-block">

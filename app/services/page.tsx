@@ -176,21 +176,21 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
         </div>
 
-        <div className="relative z-10 container-custom text-center text-white">
+        <div className="relative z-10 container-custom text-center text-theme">
           <h1 className="heading-xl text-white mb-6">Nos Services</h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl text-muted max-w-3xl mx-auto">
             Des solutions complètes de construction pour tous vos projets résidentiels et commerciaux
           </p>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-red-600 text-white">
+      <section className="section-padding bg-red-600 text-card-foreground">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="flex justify-center mb-3 text-white">
+                <div className="flex justify-center mb-3 text-card-foreground">
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-bold mb-2">{stat.number}</div>
@@ -273,13 +273,13 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gray-900 text-white">
+      <section className="section-padding bg-muted text-theme">
         <div className="container-custom text-center">
           <h2 className="heading-lg text-white mb-4">
             Prêt à commencer votre projet?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contactez notre équipe dès aujourd&apos;hui pour une consultation gratuite
+          <p className="text-xl text-muted mb-8 max-w-3xl mx-auto">
+            Contactez notre équipe dès aujourd'hui pour une consultation gratuite
             et découvrez comment nous pouvons concrétiser vos idées.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">

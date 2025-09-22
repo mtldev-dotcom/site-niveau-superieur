@@ -184,7 +184,7 @@ export default function QuotePage() {
     }
   };
 
-    if (isSubmitted) {
+  if (isSubmitted) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-muted">
         <div className="max-w-md mx-auto text-center p-8">
@@ -220,7 +220,7 @@ export default function QuotePage() {
     );
   }
 
-    return (
+  return (
     <div className="min-h-screen bg-muted">
       {/* Header */}
       <section className="bg-card border-theme">
@@ -237,7 +237,7 @@ export default function QuotePage() {
                 <div key={step.number} className="flex items-center">
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors ${
                     currentStep >= step.number
-                      ? 'bg-red-600 border-red-600 text-white'
+                      ? 'bg-red-600 border-red-600 text-card-foreground'
                       : 'border-theme text-muted'
                   }`}>
                     {currentStep > step.number ? (
@@ -296,7 +296,7 @@ export default function QuotePage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Nom de famille *
                         </label>
                         <input
@@ -305,12 +305,12 @@ export default function QuotePage() {
                           required
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="Votre nom"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Email *
                         </label>
                         <input
@@ -319,12 +319,12 @@ export default function QuotePage() {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="votre@email.com"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Téléphone *
                         </label>
                         <input
@@ -333,7 +333,7 @@ export default function QuotePage() {
                           required
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="514-555-7890"
                         />
                       </div>
@@ -344,10 +344,10 @@ export default function QuotePage() {
                 {/* Step 2: Project Location */}
                 {currentStep === 2 && (
                   <div>
-                    <h2 className="heading-md text-black mb-6">Localisation du projet</h2>
+                    <h2 className="heading-md text-theme mb-6">Localisation du projet</h2>
                     <div className="space-y-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Adresse du projet *
                         </label>
                         <input
@@ -356,13 +356,13 @@ export default function QuotePage() {
                           required
                           value={formData.address}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="123 Rue Exemple"
                         />
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-muted mb-2">
                             Ville *
                           </label>
                           <input
@@ -371,12 +371,12 @@ export default function QuotePage() {
                             required
                             value={formData.city}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                             placeholder="Montréal"
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-muted mb-2">
                             Code postal
                           </label>
                           <input
@@ -384,14 +384,14 @@ export default function QuotePage() {
                             name="postalCode"
                             value={formData.postalCode}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                             placeholder="H1A 1A1"
                           />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-muted mb-2">
                             Type de projet *
                           </label>
                           <select
@@ -399,23 +399,23 @@ export default function QuotePage() {
                             required
                             value={formData.projectType}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
-                          >
-                            <option value="">Sélectionnez un type</option>
-                            {projectTypes.map((type, index) => (
-                              <option key={index} value={type}>{type}</option>
-                            ))}
-                          </select>
+                            className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
+                        >
+                          <option value="">Sélectionnez un type</option>
+                          {projectTypes.map((type, index) => (
+                            <option key={index} value={type}>{type}</option>
+                          ))}
+                        </select>
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-muted mb-2">
                             Type de propriété
                           </label>
                           <select
                             name="propertyType"
                             value={formData.propertyType}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                            className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           >
                             <option value="">Sélectionnez un type</option>
                             {propertyTypes.map((type, index) => (
@@ -431,10 +431,10 @@ export default function QuotePage() {
                 {/* Step 3: Project Details */}
                 {currentStep === 3 && (
                   <div>
-                    <h2 className="heading-md text-black mb-6">Détails du projet</h2>
+                    <h2 className="heading-md text-theme mb-6">Détails du projet</h2>
                     <div className="space-y-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Portée du projet *
                         </label>
                         <textarea
@@ -443,13 +443,13 @@ export default function QuotePage() {
                           rows={4}
                           value={formData.projectScope}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="Décrivez votre projet en détail..."
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-3">
+                        <label className="block text-sm font-medium text-muted mb-3">
                           Pièces concernées (sélectionnez toutes les pièces applicables)
                         </label>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -459,16 +459,16 @@ export default function QuotePage() {
                                 type="checkbox"
                                 checked={formData.rooms.includes(room)}
                                 onChange={() => handleCheckboxChange(room, 'rooms')}
-                                className="rounded border-gray-300 text-red-600 focus:ring-red-500"
+                                className="rounded border-theme text-red-600 focus:ring-red-500"
                               />
-                              <span className="text-sm text-gray-700">{room}</span>
+                              <span className="text-sm text-muted">{room}</span>
                             </label>
                           ))}
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Échéancier souhaité *
                         </label>
                         <select
@@ -476,7 +476,7 @@ export default function QuotePage() {
                           required
                           value={formData.timeline}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                         >
                           <option value="">Sélectionnez un délai</option>
                           {timelineOptions.map((option, index) => (
@@ -491,10 +491,10 @@ export default function QuotePage() {
                 {/* Step 4: Budget & Preferences */}
                 {currentStep === 4 && (
                   <div>
-                    <h2 className="heading-md text-black mb-6">Budget et préférences</h2>
+                    <h2 className="heading-md text-theme mb-6">Budget et préférences</h2>
                     <div className="space-y-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Budget approximatif *
                         </label>
                         <select
@@ -502,7 +502,7 @@ export default function QuotePage() {
                           required
                           value={formData.budget}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                         >
                           <option value="">Sélectionnez une fourchette</option>
                           {budgetRanges.map((range, index) => (
@@ -512,25 +512,25 @@ export default function QuotePage() {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Priorité principale
                         </label>
                         <select
                           name="priority"
                           value={formData.priority}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                         >
                           <option value="">Sélectionnez une priorité</option>
                           <option value="qualite">Qualité maximale</option>
                           <option value="budget">Respect du budget</option>
-                          <option value="delai">Rapidité d&apos;exécution</option>
+                          <option value="delai">Rapidité d'exécution</option>
                           <option value="equilibre">Équilibre qualité/prix/délai</option>
                         </select>
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Préférences de matériaux
                         </label>
                         <textarea
@@ -538,7 +538,7 @@ export default function QuotePage() {
                           rows={3}
                           value={formData.materials}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="Décrivez vos préférences en matière de matériaux, style, marques..."
                         />
                       </div>
@@ -549,10 +549,10 @@ export default function QuotePage() {
                 {/* Step 5: Final Details */}
                 {currentStep === 5 && (
                   <div>
-                    <h2 className="heading-md text-black mb-6">Informations complémentaires</h2>
+                    <h2 className="heading-md text-theme mb-6">Informations complémentaires</h2>
                     <div className="space-y-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Description détaillée de votre projet *
                         </label>
                         <textarea
@@ -561,13 +561,13 @@ export default function QuotePage() {
                           rows={5}
                           value={formData.description}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="Ajoutez tous les détails importants, contraintes particulières, objectifs spécifiques..."
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Avez-vous des plans ou documents?
                         </label>
                         <div className="space-y-3">
@@ -578,9 +578,9 @@ export default function QuotePage() {
                               value="oui"
                               checked={formData.hasPlans === 'oui'}
                               onChange={handleInputChange}
-                              className="border-gray-300 text-red-600 focus:ring-red-500"
+                              className="border-theme text-red-600 focus:ring-red-500"
                             />
-                            <span className="text-sm text-gray-700">Oui, j&apos;ai des plans/documents</span>
+                            <span className="text-sm text-muted">Oui, j'ai des plans/documents</span>
                           </label>
                           <label className="flex items-center space-x-2">
                             <input
@@ -589,16 +589,16 @@ export default function QuotePage() {
                               value="non"
                               checked={formData.hasPlans === 'non'}
                               onChange={handleInputChange}
-                              className="border-gray-300 text-red-600 focus:ring-red-500"
+                              className="border-theme text-red-600 focus:ring-red-500"
                             />
-                            <span className="text-sm text-gray-700">Non, j&apos;ai besoin d&apos;aide pour la conception</span>
+                            <span className="text-sm text-muted">Non, j'ai besoin d'aide pour la conception</span>
                           </label>
                         </div>
                       </div>
 
                       {formData.hasPlans === 'oui' && (
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <label className="block text-sm font-medium text-muted mb-2">
                             Télécharger vos fichiers
                           </label>
                           <div className="border-2 border-theme rounded-lg p-6 text-center">
@@ -616,7 +616,7 @@ export default function QuotePage() {
                             />
                             <label
                               htmlFor="file-upload"
-                              className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg cursor-pointer transition-colors"
+                              className="bg-red-600 hover:bg-red-700 text-card-foreground px-4 py-2 rounded-lg cursor-pointer transition-colors"
                             >
                               Sélectionner fichiers
                             </label>
@@ -626,10 +626,10 @@ export default function QuotePage() {
                           </div>
                           {formData.files.length > 0 && (
                             <div className="mt-4">
-                              <p className="text-sm font-medium text-gray-700 mb-2">Fichiers sélectionnés:</p>
+                              <p className="text-sm font-medium text-muted mb-2">Fichiers sélectionnés:</p>
                               <ul className="space-y-1">
                                 {formData.files.map((file, index) => (
-                                  <li key={index} className="text-sm text-gray-600 flex items-center">
+                                  <li key={index} className="text-sm text-muted flex items-center">
                                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                                     {file.name}
                                   </li>
@@ -641,14 +641,14 @@ export default function QuotePage() {
                       )}
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Méthode de contact préférée
                         </label>
                         <select
                           name="preferredContact"
                           value={formData.preferredContact}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                         >
                           <option value="">Sélectionnez une méthode</option>
                           <option value="telephone">Téléphone</option>
@@ -674,7 +674,7 @@ export default function QuotePage() {
                   </button>
 
                   <div className="text-center">
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-muted">
                       Étape {currentStep} sur {totalSteps}
                     </span>
                   </div>
@@ -684,7 +684,7 @@ export default function QuotePage() {
                       type="button"
                       onClick={nextStep}
                       disabled={!isStepValid()}
-                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg transition-colors"
+                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-6 py-3 rounded-lg transition-colors"
                     >
                       <span>Suivant</span>
                       <ChevronRight className="w-4 h-4" />
@@ -693,11 +693,11 @@ export default function QuotePage() {
                     <button
                       type="submit"
                       disabled={!isStepValid() || isSubmitting}
-                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white px-8 py-3 rounded-lg transition-colors"
+                      className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-muted text-card-foreground px-8 py-3 rounded-lg transition-colors"
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-card-foreground"></div>
                           <span>Envoi en cours...</span>
                         </>
                       ) : (

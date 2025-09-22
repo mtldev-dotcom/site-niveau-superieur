@@ -38,7 +38,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         // Persist theme as a cookie so the server can render the same class on first load
         const maxAge = 60 * 60 * 24 * 365; // 1 year
         document.cookie = `theme=${theme}; Path=/; Max-Age=${maxAge}; SameSite=Lax`;
-      } catch (e) {
+      } catch {
         // ignore if running in non-browser environment
       }
     }

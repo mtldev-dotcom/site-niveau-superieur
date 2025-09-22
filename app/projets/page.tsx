@@ -204,9 +204,9 @@ export default function ProjectsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
         </div>
 
-        <div className="relative z-10 container-custom text-center text-white">
-          <h1 className="heading-xl text-white mb-6">Nos Réalisations</h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+        <div className="relative z-10 container-custom text-center text-theme">
+          <h1 className="heading-xl text-theme mb-6">Nos Réalisations</h1>
+          <p className="text-xl text-muted max-w-3xl mx-auto">
             Découvrez notre portfolio de projets réalisés avec excellence et savoir-faire
           </p>
         </div>
@@ -239,7 +239,7 @@ export default function ProjectsPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="heading-lg text-theme mb-4">Avant / Après</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Voyez la transformation remarquable de nos projets
             </p>
           </div>
@@ -254,22 +254,22 @@ export default function ProjectsPage() {
                   afterAlt={`${project.title} - après`}
                   className="rounded-t-lg"
                 />
-                <div className="p-6">
-                  <h3 className="heading-sm text-theme mb-2">{project.title}</h3>
-                  <p className="text-muted mb-4">{project.description}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {project.location}
-                      </span>
-                      <span className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {project.date}
-                      </span>
+                  <div className="p-6">
+                    <h3 className="heading-sm text-theme mb-2">{project.title}</h3>
+                    <p className="text-muted mb-4">{project.description}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4 text-sm text-muted">
+                        <span className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {project.location}
+                        </span>
+                        <span className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-1" />
+                          {project.date}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
               </div>
             ))}
           </div>
@@ -340,13 +340,13 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-red-600 text-white">
+      <section className="section-padding bg-red-600 text-card-foreground">
         <div className="container-custom text-center">
-          <h2 className="heading-lg text-white mb-4">
+          <h2 className="heading-lg text-card-foreground mb-4">
             Votre projet sera le prochain!
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Rejoignez nos clients satisfaits et transformez vos idées en réalité avec notre équipe d&apos;experts.
+            Rejoignez nos clients satisfaits et transformez vos idées en réalité avec notre équipe d'experts.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link href="/soumission" className="bg-card text-red-600 hover:bg-muted px-8 py-4 rounded-lg font-medium transition-colors">
