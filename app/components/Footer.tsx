@@ -8,20 +8,20 @@ export default function Footer() {
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-3 mb-6">
+          <div className="text-left">
+            <div className="flex flex-col items-start space-y-3 mb-6">
               <Image
                 src="/images/logo.png"
                 alt="Niveau Supérieur Construction"
-                width={40}
-                height={40}
-                className="w-10 h-10"
+                width={128}
+                height={128}
+                className="self-start w-28 h-28 md:w-40 md:h-40"
               />
-              <div>
+              <div className="text-left">
                 <h3 className="font-bold text-lg text-theme">
                   Niveau Supérieur
                 </h3>
-                <p className="font-poppins text-sm text-brand-red uppercase tracking-wide">
+                <p className="font-poppins text-sm text-primary uppercase tracking-wide">
                   Construction
                 </p>
               </div>
@@ -30,29 +30,6 @@ export default function Footer() {
               Votre partenaire de confiance dans le Grand Montréal. 46 ans d&apos;expérience combinée
               en construction résidentielle et commerciale.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-muted hover:text-brand-red transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-brand-red transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-brand-red transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
@@ -62,7 +39,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/construction-residentielle"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Construction résidentielle
                 </Link>
@@ -70,7 +47,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/projets-commerciaux"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Projets commerciaux
                 </Link>
@@ -78,7 +55,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/renovations"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Rénovations & agrandissements
                 </Link>
@@ -86,7 +63,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/charpente"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Charpente & structures
                 </Link>
@@ -94,7 +71,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/finition"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Finition intérieure
                 </Link>
@@ -102,7 +79,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/electricite"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Électricité & domotique
                 </Link>
@@ -117,7 +94,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/a-propos"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   À propos
                 </Link>
@@ -125,7 +102,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/projets"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Nos réalisations
                 </Link>
@@ -133,7 +110,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/soumission"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Demander une soumission
                 </Link>
@@ -141,7 +118,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                  className="font-open-sans text-muted hover:text-primary transition-colors"
                 >
                   Contact
                 </Link>
@@ -154,33 +131,33 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-6">Contactez-nous</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-brand-red mt-1 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <a
                     href="tel:514-555-7890"
-                    className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                    className="font-open-sans text-muted hover:text-primary transition-colors"
                   >
                     514-555-7890
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-brand-red mt-1 flex-shrink-0" />
+                <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <a
                     href="mailto:info@niveausuperieur.ca"
-                    className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                    className="font-open-sans text-muted hover:text-primary transition-colors"
                   >
                     info@niveausuperieur.ca
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MessageCircle className="w-5 h-5 text-brand-red mt-1 flex-shrink-0" />
+                <MessageCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <a
                     href="https://wa.me/15145557890"
-                    className="font-open-sans text-gray-300 hover:text-brand-red transition-colors"
+                    className="font-open-sans text-muted hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -189,13 +166,24 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-brand-red mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-open-sans text-gray-300">
+                  <p className="font-open-sans text-muted">
                     Grand Montréal, Québec
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="flex space-x-4 pt-2">
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -209,19 +197,19 @@ export default function Footer() {
               </p>
               <div className="flex items-center space-x-2">
                 <span className="font-open-sans text-gray-400 text-sm">Licence RBQ:</span>
-                <span className="font-poppins font-medium text-brand-red text-sm">5859-1223-01</span>
+                <span className="font-poppins font-medium text-primary text-sm">5859-1223-01</span>
               </div>
             </div>
             <div className="flex space-x-6">
               <Link
                 href="/confidentialite"
-                className="font-open-sans text-gray-400 hover:text-brand-red text-sm transition-colors"
+                className="font-open-sans text-gray-400 hover:text-primary text-sm transition-colors"
               >
                 Confidentialité
               </Link>
               <Link
                 href="/conditions"
-                className="font-open-sans text-gray-400 hover:text-brand-red text-sm transition-colors"
+                className="font-open-sans text-gray-400 hover:text-primary text-sm transition-colors"
               >
                 Conditions
               </Link>
