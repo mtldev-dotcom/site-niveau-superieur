@@ -120,11 +120,11 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg text-black mb-4">Plusieurs façons de nous joindre</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-lg text-theme mb-4">Plusieurs façons de nous joindre</h2>
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Choisissez le moyen qui vous convient le mieux
             </p>
           </div>
@@ -136,14 +136,14 @@ export default function ContactPage() {
                 href={info.action}
                 target={info.action.startsWith('http') ? '_blank' : undefined}
                 rel={info.action.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="bg-white p-6 rounded-lg card-shadow hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group"
+                className="bg-card p-6 rounded-lg card-shadow hover:shadow-xl hover:scale-105 transition-all duration-300 text-center group"
               >
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors text-red-600">
                   {info.icon}
                 </div>
-                <h3 className="font-semibold text-black mb-2">{info.title}</h3>
+                <h3 className="font-semibold text-theme mb-2">{info.title}</h3>
                 <p className="text-red-600 font-medium mb-2">{info.value}</p>
-                <p className="text-sm text-gray-600">{info.description}</p>
+                <p className="text-sm text-muted">{info.description}</p>
               </a>
             ))}
           </div>
@@ -155,9 +155,9 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg card-shadow p-8">
-                <h2 className="heading-md text-black mb-6">Envoyez-nous un message</h2>
+              <div className="lg:col-span-2">
+              <div className="bg-card rounded-lg card-shadow p-8">
+                <h2 className="heading-md text-theme mb-6">Envoyez-nous un message</h2>
 
                 {isSubmitted ? (
                   <div className="text-center py-12">
@@ -327,9 +327,9 @@ export default function ContactPage() {
               </div>
 
               {/* Service Areas */}
-              <div className="bg-white p-6 rounded-lg card-shadow">
-                <h3 className="text-xl font-semibold text-black mb-4">Zones de service</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="bg-card p-6 rounded-lg card-shadow">
+                <h3 className="text-xl font-semibold text-theme mb-4">Zones de service</h3>
+                <p className="text-muted mb-4">
                   Nous servons fièrement le Grand Montréal et ses environs:
                 </p>
                 <div className="grid grid-cols-2 gap-2">
@@ -343,8 +343,8 @@ export default function ContactPage() {
               </div>
 
               {/* Hours */}
-              <div className="bg-white p-6 rounded-lg card-shadow">
-                <h3 className="text-xl font-semibold text-black mb-4">Heures d&apos;ouverture</h3>
+              <div className="bg-card p-6 rounded-lg card-shadow">
+                <h3 className="text-xl font-semibold text-theme mb-4">Heures d'ouverture</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Lundi - Vendredi</span>
@@ -372,18 +372,18 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="bg-gray-100" id="map">
+      <section className="bg-muted" id="map">
         <div className="container-custom py-16">
           <div className="text-center mb-8">
-            <h2 className="heading-lg text-black mb-4">Notre zone de service</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="heading-lg text-theme mb-4">Notre zone de service</h2>
+            <p className="text-xl text-muted">
               Nous intervenons dans tout le Grand Montréal
             </p>
           </div>
 
           {/* Placeholder for Google Map */}
-          <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-            <div className="text-center text-gray-600">
+          <div className="bg-muted h-96 rounded-lg flex items-center justify-center">
+            <div className="text-center text-muted">
               <MapPin className="w-12 h-12 mx-auto mb-4" />
               <p className="text-lg font-medium">Carte Google Maps</p>
               <p className="text-sm">Grand Montréal et environs</p>

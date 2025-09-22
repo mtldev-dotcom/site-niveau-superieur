@@ -205,15 +205,15 @@ export default function ServicesPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Notre Expertise</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-lg text-theme mb-4">Notre Expertise</h2>
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Découvrez nos domaines de spécialisation et laissez-nous transformer vos idées en réalité.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {services.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg overflow-hidden card-shadow">
+              <div key={service.id} className="bg-card rounded-lg overflow-hidden card-shadow">
                 <div className="relative h-64">
                   <Image
                     src={service.image}
@@ -222,37 +222,37 @@ export default function ServicesPage() {
                     className="object-cover"
                   />
                 </div>
-
+    
                 <div className="p-8">
-                  <h3 className="heading-md text-black mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.fullDescription}</p>
-
+                  <h3 className="heading-md text-theme mb-4">{service.title}</h3>
+                  <p className="text-muted mb-6">{service.fullDescription}</p>
+    
                   <div className="mb-6">
-                    <h4 className="font-semibold text-black mb-3">Services inclus :</h4>
+                    <h4 className="font-semibold text-theme mb-3">Services inclus :</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">{feature}</span>
+                          <span className="text-sm text-muted">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
-
+    
                   <div className="mb-6">
-                    <h4 className="font-semibold text-black mb-3">Notre processus :</h4>
+                    <h4 className="font-semibold text-theme mb-3">Notre processus :</h4>
                     <ol className="space-y-2">
                       {service.process.map((step, stepIndex) => (
                         <li key={stepIndex} className="flex items-start space-x-3">
                           <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-medium">
                             {stepIndex + 1}
                           </span>
-                          <span className="text-sm text-gray-600">{step}</span>
+                          <span className="text-sm text-muted">{step}</span>
                         </li>
                       ))}
                     </ol>
                   </div>
-
+    
                   <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                     <Link href="/soumission" className="btn-primary flex-1 text-center">
                       Demander une soumission

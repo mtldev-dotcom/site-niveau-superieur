@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -105,8 +105,8 @@ export default function RootLayout({
   })();`;
 
   // Read server-side cookie to set html class before hydration (Next.js server)
-  const cookieStore = cookies();
-  const themeCookie = cookieStore.get('theme')?.value;
+  const cookieStore = await cookies();
+  const themeCookie = cookieStore.get?.('theme')?.value ?? cookieStore.get('theme')?.value;
   const htmlClass = themeCookie === 'dark' ? 'dark' : themeCookie === 'light' ? 'light' : '';
 
   return (

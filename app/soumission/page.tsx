@@ -184,16 +184,16 @@ export default function QuotePage() {
     }
   };
 
-  if (isSubmitted) {
+    if (isSubmitted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-muted">
         <div className="max-w-md mx-auto text-center p-8">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-green-600" />
           </div>
-          <h1 className="heading-lg text-black mb-4">Soumission envoyée!</h1>
-          <p className="text-gray-600 mb-6">
-            Merci pour votre demande de soumission. Notre équipe l&apos;examinera et vous contactera
+          <h1 className="heading-lg text-theme mb-4">Soumission envoyée!</h1>
+          <p className="text-muted mb-6">
+            Merci pour votre demande de soumission. Notre équipe l'examinera et vous contactera
             dans les prochaines 24 heures pour discuter de votre projet.
           </p>
           <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
@@ -220,14 +220,14 @@ export default function QuotePage() {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gray-50">
+    return (
+    <div className="min-h-screen bg-muted">
       {/* Header */}
-      <section className="bg-white border-b">
+      <section className="bg-card border-theme">
         <div className="container-custom py-8">
           <div className="max-w-4xl mx-auto">
-            <h1 className="heading-lg text-black mb-2">Demande de soumission</h1>
-            <p className="text-gray-600 mb-8">
+            <h1 className="heading-lg text-theme mb-2">Demande de soumission</h1>
+            <p className="text-muted mb-8">
               Obtenez une soumission détaillée et personnalisée pour votre projet
             </p>
 
@@ -238,7 +238,7 @@ export default function QuotePage() {
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors ${
                     currentStep >= step.number
                       ? 'bg-red-600 border-red-600 text-white'
-                      : 'border-gray-300 text-gray-400'
+                      : 'border-theme text-muted'
                   }`}>
                     {currentStep > step.number ? (
                       <CheckCircle className="w-5 h-5" />
@@ -248,12 +248,12 @@ export default function QuotePage() {
                   </div>
                   <div className="ml-3 hidden sm:block">
                     <div className={`text-sm font-medium ${
-                      currentStep >= step.number ? 'text-red-600' : 'text-gray-400'
+                      currentStep >= step.number ? 'text-red-600' : 'text-muted'
                     }`}>
                       Étape {step.number}
                     </div>
                     <div className={`text-xs ${
-                      currentStep >= step.number ? 'text-gray-900' : 'text-gray-400'
+                      currentStep >= step.number ? 'text-theme' : 'text-muted'
                     }`}>
                       {step.title}
                     </div>
@@ -275,7 +275,7 @@ export default function QuotePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <form onSubmit={handleSubmit}>
-              <div className="bg-white rounded-lg card-shadow p-8">
+              <div className="bg-card rounded-lg card-shadow p-8">
                 {/* Step 1: Personal Information */}
                 {currentStep === 1 && (
                   <div>
@@ -601,9 +601,9 @@ export default function QuotePage() {
                           <label className="block text-sm font-medium text-gray-700 mb-2">
                             Télécharger vos fichiers
                           </label>
-                          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                            <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                            <p className="text-sm text-gray-600 mb-2">
+                          <div className="border-2 border-theme rounded-lg p-6 text-center">
+                            <Upload className="w-8 h-8 text-muted mx-auto mb-2" />
+                            <p className="text-sm text-muted mb-2">
                               Glissez vos fichiers ici ou cliquez pour parcourir
                             </p>
                             <input
@@ -620,7 +620,7 @@ export default function QuotePage() {
                             >
                               Sélectionner fichiers
                             </label>
-                            <p className="text-xs text-gray-500 mt-2">
+                            <p className="text-xs text-muted mt-2">
                               PDF, JPG, PNG, DWG (max 10MB par fichier)
                             </p>
                           </div>
@@ -663,11 +663,11 @@ export default function QuotePage() {
 
                 {/* Navigation Buttons */}
                 <div className="flex justify-between items-center mt-8 pt-6 border-t">
-                  <button
+                    <button
                     type="button"
                     onClick={prevStep}
                     disabled={currentStep === 1}
-                    className="flex items-center space-x-2 px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="flex items-center space-x-2 px-6 py-3 border border-theme rounded-lg text-muted hover:bg-card disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <ChevronLeft className="w-4 h-4" />
                     <span>Précédent</span>

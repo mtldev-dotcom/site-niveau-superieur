@@ -308,7 +308,7 @@ export default function Home() {
             <Link href="/soumission" className="btn-primary">
               Demander une soumission gratuite
             </Link>
-            <Link href="/contact" className="btn-secondary border-white text-white hover:bg-white hover:text-brand-black">
+            <Link href="/contact" className="btn-secondary border-theme text-theme hover:bg-card hover:text-brand-black">
               Nous contacter
             </Link>
           </div>

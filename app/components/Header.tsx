@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 bg-background border-b border-border shadow-lg z-50">
+    <header className="sticky top-0 bg-theme border-b border-theme shadow-lg z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -31,7 +31,7 @@ export default function Header() {
               className="w-12 h-12"
             />
             <div>
-              <h1 className="font-extrabold text-xl text-foreground">
+              <h1 className="font-extrabold text-xl text-theme">
                 Niveau Supérieur
               </h1>
               <p className="text-sm text-primary uppercase tracking-wide">
@@ -46,7 +46,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="font-medium text-muted hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -55,16 +55,16 @@ export default function Header() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a
+              <a
               href="tel:514-555-7890"
-              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 text-muted hover:text-primary transition-colors"
               aria-label="Call 514-555-7890"
             >
               <Phone className="w-4 h-4" />
             </a>
             <a
               href="https://wa.me/15145557890"
-              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 text-muted hover:text-primary transition-colors"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -82,7 +82,7 @@ export default function Header() {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-muted-foreground hover:text-primary transition-colors"
+              className="p-2 text-muted hover:text-primary transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -91,13 +91,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-border">
+          <div className="lg:hidden border-t border-theme">
             <nav className="py-4 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block font-medium text-muted-foreground hover:text-primary transition-colors"
+                  className="block font-medium text-muted hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -106,7 +106,7 @@ export default function Header() {
               <div className="pt-4 space-y-3">
                 <a
                   href="tel:514-555-7890"
-                  className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center space-x-2 text-muted hover:text-primary transition-colors"
                   aria-label="Call 514-555-7890"
                 >
                   <Phone className="w-4 h-4" />

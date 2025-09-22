@@ -71,7 +71,7 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden bg-gray-200 select-none ${className}`}
+      className={`relative overflow-hidden bg-muted select-none ${className}`}
       style={{ aspectRatio: '16/9' }}
     >
       {/* Before Image */}
@@ -105,13 +105,13 @@ export default function BeforeAfterSlider({
 
       {/* Slider Line */}
       <div
-        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg cursor-ew-resize z-10"
+        className="absolute top-0 bottom-0 w-1 bg-[color:var(--color-card-foreground)] shadow-lg cursor-ew-resize z-10"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleMouseDown}
       >
         {/* Slider Handle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-red-600 flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[color:var(--color-card-foreground)] rounded-full shadow-lg border-2 border-red-600 flex items-center justify-center">
           <div className="w-1 h-4 bg-red-600 rounded"></div>
         </div>
       </div>

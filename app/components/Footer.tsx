@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, MessageCircle, Facebook, Instagram, Linkedin } fro
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-black text-white">
+    <footer className="bg-theme">
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -18,7 +18,7 @@ export default function Footer() {
                 className="w-10 h-10"
               />
               <div>
-                <h3 className="font-bold text-lg text-white">
+                <h3 className="font-bold text-lg text-theme">
                   Niveau Supérieur
                 </h3>
                 <p className="font-poppins text-sm text-brand-red uppercase tracking-wide">
@@ -26,14 +26,14 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-300 mb-4">
+            <p className="text-muted mb-4">
               Votre partenaire de confiance dans le Grand Montréal. 46 ans d&apos;expérience combinée
               en construction résidentielle et commerciale.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-brand-red transition-colors"
+                className="text-muted hover:text-brand-red transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -201,10 +201,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8 mt-12">
+        <div className="border-t border-theme pt-8 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="font-open-sans text-gray-400 text-sm">
+              <p className="font-open-sans text-muted text-sm">
                 © 2024 Niveau Supérieur Construction. Tous droits réservés.
               </p>
               <div className="flex items-center space-x-2">

@@ -213,7 +213,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Filter Section */}
-      <section className="bg-white border-b">
+      <section className="bg-card border-theme">
         <div className="container-custom py-8">
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
@@ -223,7 +223,7 @@ export default function ProjectsPage() {
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   activeFilter === filter.id
                     ? 'bg-red-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-muted text-muted hover:bg-muted/90'
                 }`}
               >
                 <Filter className="w-4 h-4 inline mr-2" />
@@ -235,10 +235,10 @@ export default function ProjectsPage() {
       </section>
 
       {/* Featured Before/After */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg text-black mb-4">Avant / Après</h2>
+            <h2 className="heading-lg text-theme mb-4">Avant / Après</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Voyez la transformation remarquable de nos projets
             </p>
@@ -246,7 +246,7 @@ export default function ProjectsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.slice(0, 2).map((project) => (
-              <div key={`before-after-${project.id}`} className="bg-white rounded-lg overflow-hidden card-shadow">
+                  <div key={`before-after-${project.id}`} className="bg-card rounded-lg overflow-hidden card-shadow">
                 <BeforeAfterSlider
                   beforeImage={project.beforeImage}
                   afterImage={project.afterImage}
@@ -255,8 +255,8 @@ export default function ProjectsPage() {
                   className="rounded-t-lg"
                 />
                 <div className="p-6">
-                  <h3 className="heading-sm text-black mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="heading-sm text-theme mb-2">{project.title}</h3>
+                  <p className="text-muted mb-4">{project.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span className="flex items-center">
@@ -280,15 +280,15 @@ export default function ProjectsPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg text-black mb-4">Tous nos projets</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-lg text-theme mb-4">Tous nos projets</h2>
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Explorez notre portfolio complet de réalisations ({filteredProjects.length} projet{filteredProjects.length > 1 ? 's' : ''})
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <div key={project.id} className="bg-white rounded-lg overflow-hidden card-shadow hover:scale-105 transition-all duration-300">
+              <div key={project.id} className="bg-card rounded-lg overflow-hidden card-shadow hover:scale-105 transition-all duration-300">
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={project.image}
@@ -304,19 +304,19 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="heading-sm text-black mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                  <h3 className="heading-sm text-theme mb-2">{project.title}</h3>
+                  <p className="text-muted mb-4 line-clamp-2">{project.description}</p>
 
                   <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-muted">
                       <MapPin className="w-4 h-4 mr-2" />
                       {project.location}
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-muted">
                       <Calendar className="w-4 h-4 mr-2" />
                       {project.date} • {project.duration}
                     </div>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-muted">
                       <Users className="w-4 h-4 mr-2" />
                       {project.client}
                     </div>
@@ -324,7 +324,7 @@ export default function ProjectsPage() {
 
                   <div className="border-t pt-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-900">
+                      <span className="text-sm font-medium text-theme">
                         Budget: {project.budget}
                       </span>
                       <button className="text-red-600 hover:text-red-700 transition-colors">
@@ -349,10 +349,10 @@ export default function ProjectsPage() {
             Rejoignez nos clients satisfaits et transformez vos idées en réalité avec notre équipe d&apos;experts.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link href="/soumission" className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-medium transition-colors">
+            <Link href="/soumission" className="bg-card text-red-600 hover:bg-muted px-8 py-4 rounded-lg font-medium transition-colors">
               Commencer mon projet
             </Link>
-            <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-lg font-medium transition-colors">
+            <Link href="/contact" className="border-2 border-theme text-theme hover:bg-card hover:text-red-600 px-8 py-4 rounded-lg font-medium transition-colors">
               Nous contacter
             </Link>
           </div>

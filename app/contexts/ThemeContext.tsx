@@ -25,7 +25,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (mounted) {
       localStorage.setItem('theme', theme);
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      try {
+        // ensure an explicit class is present so server and client match
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        }
+
+        // Persist theme as a cookie so the server can render the same class on first load
+        const maxAge = 60 * 60 * 24 * 365; // 1 year
+        document.cookie = `theme=${theme}; Path=/; Max-Age=${maxAge}; SameSite=Lax`;
+      } catch (e) {
+        // ignore if running in non-browser environment
+      }
     }
   }, [theme, mounted]);
 

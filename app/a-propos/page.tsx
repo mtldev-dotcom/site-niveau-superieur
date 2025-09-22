@@ -133,8 +133,8 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-lg text-black mb-6">Notre Histoire</h2>
-              <div className="space-y-4 text-gray-600">
+              <h2 className="heading-lg text-theme mb-6">Notre Histoire</h2>
+              <div className="space-y-4 text-muted">
                 <p>
                   <strong className="text-black">Niveau Supérieur Construction</strong> est née de la passion et de l&apos;expertise
                   de jeunes entrepreneurs déterminés à révolutionner l&apos;industrie de la construction au Québec.
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 />
               </div>
               {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg card-shadow">
+              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-lg card-shadow">
                 <div className="text-3xl font-bold text-red-600 mb-1">500+</div>
                 <div className="text-sm text-gray-600">Projets réalisés</div>
               </div>
@@ -182,10 +182,10 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="heading-lg text-black mb-4">Nos réalisations en chiffres</h2>
+            <h2 className="heading-lg text-theme mb-4">Nos réalisations en chiffres</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Des résultats qui parlent d&apos;eux-mêmes
             </p>
@@ -193,12 +193,12 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-white p-6 rounded-lg card-shadow">
+              <div key={index} className="text-center bg-card p-6 rounded-lg card-shadow">
                 <div className="flex justify-center mb-4 text-red-600">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold text-black mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-3xl font-bold text-card-foreground mb-2">{stat.number}</div>
+                <div className="text-muted">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -209,18 +209,18 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Nos Valeurs</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-lg text-theme mb-4">Nos Valeurs</h2>
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Les principes qui guident chacune de nos actions et décisions
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-white card-shadow">
+              <div key={index} className="text-center p-6 rounded-lg bg-card card-shadow">
                 <div className="flex justify-center mb-4">{value.icon}</div>
-                <h3 className="heading-sm text-black mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="heading-sm text-theme mb-3">{value.title}</h3>
+                <p className="text-muted">{value.description}</p>
               </div>
             ))}
           </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-lg text-black mb-4">Notre Parcours</h2>
@@ -245,10 +245,10 @@ export default function AboutPage() {
               {timeline.map((item, index) => (
                 <div key={index} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                   <div className="lg:w-1/2 lg:px-8">
-                    <div className="bg-white p-6 rounded-lg card-shadow">
+                      <div className="bg-card p-6 rounded-lg card-shadow">
                       <div className="text-red-600 font-bold text-xl mb-2">{item.year}</div>
-                      <h3 className="font-bold text-black mb-2">{item.title}</h3>
-                      <p className="text-gray-600">{item.description}</p>
+                      <h3 className="font-bold text-theme mb-2">{item.title}</h3>
+                      <p className="text-muted">{item.description}</p>
                     </div>
                   </div>
 
@@ -267,15 +267,15 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Certifications & Assurances</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Votre tranquillité d&apos;esprit est notre priorité
+            <h2 className="heading-lg text-theme mb-4">Certifications & Assurances</h2>
+            <p className="text-xl text-muted max-w-3xl mx-auto">
+              Votre tranquillité d'esprit est notre priorité
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg card-shadow">
+              <div key={index} className="bg-card p-8 rounded-lg card-shadow">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mr-4">
                     <Shield className="w-8 h-8 text-white" />
@@ -291,7 +291,7 @@ export default function AboutPage() {
                   {cert.categories.map((category, categoryIndex) => (
                     <div key={categoryIndex} className="flex items-start space-x-2">
                       <CheckCircle className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">{category}</span>
+                      <span className="text-muted">{category}</span>
                     </div>
                   ))}
                 </div>
@@ -302,17 +302,17 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Notre Équipe</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-lg text-theme mb-4">Notre Équipe</h2>
+            <p className="text-xl text-muted max-w-3xl mx-auto">
               Des professionnels passionnés au service de vos projets
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg card-shadow overflow-hidden">
+            <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-lg card-shadow overflow-hidden">
               <div className="md:flex">
                 <div className="md:w-1/3">
                   <div className="h-64 md:h-full relative">
@@ -325,9 +325,9 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="md:w-2/3 p-8">
-                  <h3 className="heading-md text-black mb-4">Anthony</h3>
+                  <h3 className="heading-md text-theme mb-4">Anthony</h3>
                   <p className="text-red-600 font-medium mb-4">Fondateur & Directeur Général</p>
-                  <div className="space-y-4 text-gray-600">
+                  <div className="space-y-4 text-muted">
                     <p>
                       Entrepreneur passionné avec plus de 15 ans d&apos;expérience dans la construction,
                       Anthony a fondé Niveau Supérieur Construction avec la vision de révolutionner
@@ -353,29 +353,29 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg card-shadow text-center">
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-card p-6 rounded-lg card-shadow text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-red-600" />
                 </div>
-                <h4 className="font-semibold text-black mb-2">Équipe expérimentée</h4>
-                <p className="text-gray-600">Artisans qualifiés et certifiés</p>
+                <h4 className="font-semibold text-theme mb-2">Équipe expérimentée</h4>
+                <p className="text-muted">Artisans qualifiés et certifiés</p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg card-shadow text-center">
+              <div className="bg-card p-6 rounded-lg card-shadow text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-red-600" />
                 </div>
-                <h4 className="font-semibold text-black mb-2">Formation continue</h4>
-                <p className="text-gray-600">Techniques et technologies de pointe</p>
+                <h4 className="font-semibold text-theme mb-2">Formation continue</h4>
+                <p className="text-muted">Techniques et technologies de pointe</p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg card-shadow text-center">
+              <div className="bg-card p-6 rounded-lg card-shadow text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-red-600" />
                 </div>
-                <h4 className="font-semibold text-black mb-2">Sécurité prioritaire</h4>
-                <p className="text-gray-600">Respect strict des normes</p>
+                <h4 className="font-semibold text-theme mb-2">Sécurité prioritaire</h4>
+                <p className="text-muted">Respect strict des normes</p>
               </div>
             </div>
           </div>
