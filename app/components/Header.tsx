@@ -58,18 +58,18 @@ export default function Header() {
             <a
               href="tel:514-555-7890"
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Call 514-555-7890"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">514-555-7890</span>
             </a>
             <a
               href="https://wa.me/15145557890"
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp"
             >
               <MessageCircle className="w-4 h-4" />
-              <span className="font-medium">WhatsApp</span>
             </a>
             <ThemeToggle />
             <Link href="/soumission" className="btn-primary">
@@ -107,18 +107,18 @@ export default function Header() {
                 <a
                   href="tel:514-555-7890"
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Call 514-555-7890"
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="font-medium">514-555-7890</span>
                 </a>
                 <a
                   href="https://wa.me/15145557890"
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span className="font-medium">WhatsApp</span>
                 </a>
                 <Link href="/soumission" className="btn-primary inline-block">
                   Demander une soumission

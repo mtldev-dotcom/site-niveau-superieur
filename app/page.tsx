@@ -100,15 +100,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
         </div>
 
-        <div className="relative z-10 container-custom text-center text-white">
-          <h1 className="heading-xl text-white mb-6">
+        <div className="relative z-10 container-custom text-center text-theme">
+          <h1 className="heading-xl text-theme mb-6">
             Votre partenaire construction dans le{" "}
             <span className="text-red-600">Grand Montréal</span>
           </h1>
-          <p className="heading-sm text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="heading-sm text-muted mb-8 max-w-3xl mx-auto">
             46 ans d&apos;expérience combinée – Résidentiel & Commercial
           </p>
-          <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-muted mb-12 max-w-2xl mx-auto">
             Licence RBQ 5859-1223-01 • Entrepreneur général de confiance
           </p>
 
@@ -137,10 +137,10 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Nos Services</h2>
+            <h2 className="heading-lg text-theme mb-4">Nos Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               De la construction neuve aux rénovations complexes, nous maîtrisons tous les aspects
               de votre projet avec professionnalisme et expertise.
@@ -152,7 +152,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={service.href}
-                className="group bg-white rounded-lg overflow-hidden card-shadow hover:scale-105 transition-all duration-300"
+                className="group card card-shadow rounded-lg overflow-hidden hover:scale-105 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -163,9 +163,9 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="heading-sm text-black mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="flex items-center text-red-600 font-medium">
+                  <h3 className="heading-sm text-card-foreground mb-3">{service.title}</h3>
+                  <p className="text-muted mb-4">{service.description}</p>
+                  <div className="flex items-center text-primary font-medium">
                     <span>En savoir plus</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -180,7 +180,7 @@ export default function Home() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Pourquoi nous choisir?</h2>
+            <h2 className="heading-lg text-theme mb-4">Pourquoi nous choisir?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Notre engagement envers l&apos;excellence nous distingue dans l&apos;industrie de la construction.
             </p>
@@ -188,10 +188,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whyUs.map((item, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-white card-shadow">
+              <div key={index} className="card card-shadow p-6 rounded-lg text-center">
                 <div className="flex justify-center mb-4">{item.icon}</div>
-                <h3 className="heading-sm text-brand-black mb-3">{item.title}</h3>
-                <p className="font-open-sans text-brand-gray">{item.description}</p>
+                <h3 className="heading-sm text-card-foreground mb-3">{item.title}</h3>
+                <p className="font-open-sans text-muted">{item.description}</p>
               </div>
             ))}
           </div>
@@ -199,10 +199,10 @@ export default function Home() {
       </section>
 
       {/* Recent Projects Teaser */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Nos Réalisations Récentes</h2>
+            <h2 className="heading-lg text-theme mb-4">Nos Réalisations Récentes</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Découvrez quelques-uns de nos projets les plus remarquables.
             </p>
@@ -264,7 +264,7 @@ export default function Home() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="heading-lg text-black mb-4">Ce que disent nos clients</h2>
+            <h2 className="heading-lg text-theme mb-4">Ce que disent nos clients</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               La satisfaction de nos clients est notre plus grande récompense.
             </p>
@@ -272,21 +272,21 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg card-shadow">
+              <div key={index} className="card card-shadow p-6 rounded-lg">
                 <div className="flex items-center mb-4">
-                  <Quote className="w-8 h-8 text-brand-red mr-3" />
+                  <Quote className="w-8 h-8 text-primary mr-3" />
                   <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
                 </div>
-                <p className="font-open-sans text-gray-600 mb-4 italic">
+                <p className="font-open-sans text-muted mb-4 italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <div className="font-poppins font-medium text-black">
+                <div className="font-poppins font-medium text-card-foreground">
                   <p>{testimonial.name}</p>
-                  <p className="font-open-sans text-sm text-gray-600">{testimonial.location}</p>
+                  <p className="font-open-sans text-sm text-muted">{testimonial.location}</p>
                 </div>
               </div>
             ))}

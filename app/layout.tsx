@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins, Open_Sans } from "next/font/google";
 import "./globals.css";
+import { cookies } from 'next/headers';
 import ClientWrapper from "./components/ClientWrapper";
 
 const montserrat = Montserrat({
@@ -85,8 +86,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const setInitialTheme = `(function() {
+    try {
+      // Only apply when no explicit theme class is present (server may have rendered one)
+      var root = document.documentElement;
+      if (root.classList.contains('dark') || root.classList.contains('light')) return;
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        root.classList.add('dark');
+      } else if (theme === 'light') {
+        root.classList.add('light');
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.classList.add('dark');
+      } else {
+        root.classList.add('light');
+      }
+    } catch (e) {}
+  })();`;
+
+  // Read server-side cookie to set html class before hydration (Next.js server)
+  const cookieStore = cookies();
+  const themeCookie = cookieStore.get('theme')?.value;
+  const htmlClass = themeCookie === 'dark' ? 'dark' : themeCookie === 'light' ? 'light' : '';
+
   return (
-    <html lang="en">
+    <html lang="en" className={htmlClass}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+      </head>
       <body
         className={`${montserrat.variable} ${poppins.variable} ${openSans.variable} font-open-sans antialiased`}
       >
