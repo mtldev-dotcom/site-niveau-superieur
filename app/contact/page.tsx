@@ -344,7 +344,7 @@ export default function ContactPage() {
 
               {/* Hours */}
               <div className="bg-card p-6 rounded-lg card-shadow">
-                <h3 className="text-xl font-semibold text-theme mb-4">Heures d'ouverture</h3>
+                <h3 className="text-xl font-semibold text-theme mb-4">Heures d’ouverture</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-muted">Lundi - Vendredi</span>

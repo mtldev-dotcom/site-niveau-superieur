@@ -346,7 +346,7 @@ export default function ProjectsPage() {
             Votre projet sera le prochain!
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Rejoignez nos clients satisfaits et transformez vos idées en réalité avec notre équipe d'experts.
+            Rejoignez nos clients satisfaits et transformez vos idées en réalité avec notre équipe d’experts.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link href="/soumission" className="bg-card text-red-600 hover:bg-muted px-8 py-4 rounded-lg font-medium transition-colors">

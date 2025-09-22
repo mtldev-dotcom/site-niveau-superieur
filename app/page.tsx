@@ -181,9 +181,9 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="heading-lg text-theme mb-4">Pourquoi nous choisir?</h2>
-            <p className="text-xl text-muted max-w-3xl mx-auto">
-              Notre engagement envers l'excellence nous distingue dans l'industrie de la construction.
-            </p>
+          <p className="text-xl text-muted max-w-3xl mx-auto">
+            Notre engagement envers l’excellence nous distingue dans l’industrie de la construction.
+          </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

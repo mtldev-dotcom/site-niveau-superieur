@@ -193,7 +193,7 @@ export default function QuotePage() {
           </div>
           <h1 className="heading-lg text-theme mb-4">Soumission envoyée!</h1>
           <p className="text-muted mb-6">
-            Merci pour votre demande de soumission. Notre équipe l'examinera et vous contactera
+            Merci pour votre demande de soumission. Notre équipe l’examinera et vous contactera
             dans les prochaines 24 heures pour discuter de votre projet.
           </p>
           <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
@@ -524,7 +524,7 @@ export default function QuotePage() {
                           <option value="">Sélectionnez une priorité</option>
                           <option value="qualite">Qualité maximale</option>
                           <option value="budget">Respect du budget</option>
-                          <option value="delai">Rapidité d'exécution</option>
+                          <option value="delai">Rapidité d’exécution</option>
                           <option value="equilibre">Équilibre qualité/prix/délai</option>
                         </select>
                       </div>
@@ -580,7 +580,7 @@ export default function QuotePage() {
                               onChange={handleInputChange}
                               className="border-theme text-red-600 focus:ring-red-500"
                             />
-                            <span className="text-sm text-muted">Oui, j'ai des plans/documents</span>
+                            <span className="text-sm text-muted">Oui, j’ai des plans/documents</span>
                           </label>
                           <label className="flex items-center space-x-2">
                             <input
@@ -591,7 +591,7 @@ export default function QuotePage() {
                               onChange={handleInputChange}
                               className="border-theme text-red-600 focus:ring-red-500"
                             />
-                            <span className="text-sm text-muted">Non, j'ai besoin d'aide pour la conception</span>
+                            <span className="text-sm text-muted">Non, j’ai besoin d’aide pour la conception</span>
                           </label>
                         </div>
                       </div>

@@ -279,7 +279,7 @@ export default function ServicesPage() {
             Prêt à commencer votre projet?
           </h2>
           <p className="text-xl text-muted mb-8 max-w-3xl mx-auto">
-            Contactez notre équipe dès aujourd'hui pour une consultation gratuite
+            Contactez notre équipe dès aujourd’hui pour une consultation gratuite
             et découvrez comment nous pouvons concrétiser vos idées.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">

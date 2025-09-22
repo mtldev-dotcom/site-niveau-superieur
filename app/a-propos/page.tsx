@@ -269,7 +269,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="heading-lg text-theme mb-4">Certifications & Assurances</h2>
             <p className="text-xl text-muted max-w-3xl mx-auto">
-              Votre tranquillité d'esprit est notre priorité
+              Votre tranquillité d’esprit est notre priorité
             </p>
           </div>
 
