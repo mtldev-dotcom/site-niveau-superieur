@@ -174,7 +174,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex space-x-4 mt-2 pt-2">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>

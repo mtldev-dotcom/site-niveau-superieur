@@ -22,8 +22,23 @@ export default {
           dark: '#555555',
         },
         'brand-white': '#FFFFFF',
+
+        // Theme tokens mapped to CSS variables (from app/globals.css)
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        'primary-foreground': "var(--primary-foreground)",
+        secondary: "var(--secondary)",
+        'secondary-foreground': "var(--secondary-foreground)",
+        muted: "var(--muted)",
+        'muted-foreground': "var(--muted-foreground)",
+        accent: "var(--accent)",
+        'accent-foreground': "var(--accent-foreground)",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        card: "var(--card)",
+        'card-foreground': "var(--card-foreground)",
       },
       fontFamily: {
         'sans': ['var(--font-open-sans)', 'system-ui', 'sans-serif'],
