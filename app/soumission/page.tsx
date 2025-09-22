@@ -260,7 +260,7 @@ export default function QuotePage() {
                   </div>
                   {index < steps.length - 1 && (
                     <div className={`w-12 h-0.5 mx-4 ${
-                      currentStep > step.number ? 'bg-red-600' : 'bg-gray-300'
+                      currentStep > step.number ? 'bg-red-600' : 'bg-muted'
                     }`} />
                   )}
                 </div>
@@ -279,10 +279,10 @@ export default function QuotePage() {
                 {/* Step 1: Personal Information */}
                 {currentStep === 1 && (
                   <div>
-                    <h2 className="heading-md text-black mb-6">Coordonnées</h2>
+                    <h2 className="heading-md text-theme mb-6">Coordonnées</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-muted mb-2">
                           Prénom *
                         </label>
                         <input
@@ -291,7 +291,7 @@ export default function QuotePage() {
                           required
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                          className="w-full px-4 py-3 border border-theme rounded-lg focus:ring-red-500 focus:border-red-500"
                           placeholder="Votre prénom"
                         />
                       </div>

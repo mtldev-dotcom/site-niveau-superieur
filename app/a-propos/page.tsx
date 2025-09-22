@@ -311,73 +311,70 @@ export default function AboutPage() {
             </p>
           </div>
 
-            <div className="max-w-4xl mx-auto">
-            <div className="bg-card rounded-lg card-shadow overflow-hidden">
-              <div className="md:flex">
-                <div className="md:w-1/3">
-                  <div className="h-64 md:h-full relative">
-                    <Image
-                      src="/images/placeholder-user.jpg"
-                      alt="Anthony - Fondateur"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Anthony Dupuis",
+                role: "Fondateur & Directeur Général",
+                photo: "/images/placeholder-user.jpg",
+                bio: "Entrepreneur et gestionnaire de projet. 15+ ans d'expérience en construction résidentielle et commerciale. Supervise la qualité et les relations clients.",
+                email: "anthony@niveausuperieur.ca",
+                phone: "514-600-0001"
+              },
+              {
+                name: "Sophie Tremblay",
+                role: "Directrice des Opérations",
+                photo: "/images/placeholder-user.jpg",
+                bio: "Coordonne les chantiers et assure le respect des délais et normes. Spécialiste en logistique de chantier.",
+                email: "sophie@niveausuperieur.ca",
+                phone: "514-600-0002"
+              },
+              {
+                name: "Marc Gagnon",
+                role: "Chef de Projet Sénior",
+                photo: "/images/placeholder-user.jpg",
+                bio: "Gestion de projets complexes, interface client et tenue de budget. 10+ ans d'expérience en rénovation et agrandissements.",
+                email: "marc@niveausuperieur.ca",
+                phone: "514-600-0003"
+              },
+              {
+                name: "Isabelle Roy",
+                role: "Architecte / Designer",
+                photo: "/images/placeholder-user.jpg",
+                bio: "Conception et plans d'aménagement, optimisation de l'espace et coordination avec architectes externes.",
+                email: "isabelle@niveausuperieur.ca",
+                phone: "514-600-0004"
+              },
+              {
+                name: "Karim Benali",
+                role: "Responsable Électricité & Domotique",
+                photo: "/images/placeholder-user.jpg",
+                bio: "Spécialiste des installations électriques et systèmes domotiques, assure conformité et performance.",
+                email: "karim@niveausuperieur.ca",
+                phone: "514-600-0005"
+              },
+              {
+                name: "Julie Fournier",
+                role: "Responsable Finitions",
+                photo: "/images/placeholder-user.jpg",
+                bio: "Expertise en menuiserie, finition intérieure et contrôle qualité des finitions esthétiques.",
+                email: "julie@niveausuperieur.ca",
+                phone: "514-600-0006"
+              }
+            ].map((member, idx) => (
+              <div key={idx} className="bg-card p-6 rounded-lg card-shadow text-center">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden relative">
+                  <Image src={member.photo} alt={member.name} fill className="object-cover" />
                 </div>
-                <div className="md:w-2/3 p-8">
-                  <h3 className="heading-md text-theme mb-4">Anthony</h3>
-                  <p className="text-red-600 font-medium mb-4">Fondateur & Directeur Général</p>
-                  <div className="space-y-4 text-muted">
-                    <p>
-                      Entrepreneur passionné avec plus de 15 ans d&apos;expérience dans la construction,
-                      Anthony a fondé Niveau Supérieur Construction avec la vision de révolutionner
-                      l&apos;industrie par l&apos;excellence et l&apos;innovation.
-                    </p>
-                    <p>
-                      Expert en gestion de projet et en relations clients, il supervise personnellement
-                      chaque projet pour garantir le respect des plus hauts standards de qualité.
-                    </p>
-                  </div>
-
-                  <div className="mt-6 pt-6 border-t">
-                    <h4 className="font-semibold text-black mb-3">Spécialisations :</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {["Gestion de projet", "Construction résidentielle", "Projets commerciaux", "Rénovations"].map((skill, index) => (
-                        <span key={index} className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <h4 className="font-semibold text-theme mb-1">{member.name}</h4>
+                <p className="text-sm text-muted mb-3">{member.role}</p>
+                <p className="text-muted text-sm mb-3">{member.bio}</p>
+                <div className="text-sm text-muted space-y-1">
+                  <div>{member.email}</div>
+                  <div>{member.phone}</div>
                 </div>
               </div>
-            </div>
-
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-card p-6 rounded-lg card-shadow text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-theme mb-2">Équipe expérimentée</h4>
-                <p className="text-muted">Artisans qualifiés et certifiés</p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg card-shadow text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-theme mb-2">Formation continue</h4>
-                <p className="text-muted">Techniques et technologies de pointe</p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg card-shadow text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-theme mb-2">Sécurité prioritaire</h4>
-                <p className="text-muted">Respect strict des normes</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
